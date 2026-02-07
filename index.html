@@ -65,26 +65,34 @@ body {
     opacity: 0.8;
 }
 
-/* Feature Sections */
-.features {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Section bands - alternating white/black like an OKN drum */
+.section {
+    padding: 60px 20px;
 }
 
-.feature {
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section.white {
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+.section.dark {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Feature layout */
+.feature-row {
     display: flex;
     align-items: center;
     gap: 60px;
-    padding: 60px 0;
-    border-bottom: 1px solid #f0f0f0;
 }
 
-.feature:last-child {
-    border-bottom: none;
-}
-
-.feature.reverse {
+.feature-row.reverse {
     flex-direction: row-reverse;
 }
 
@@ -95,15 +103,19 @@ body {
 .feature-text h2 {
     font-size: 1.75em;
     font-weight: 700;
-    color: #1a1a1a;
     margin-bottom: 12px;
 }
 
+.section.white .feature-text h2 { color: #1a1a1a; }
+.section.dark .feature-text h2 { color: #ffffff; }
+
 .feature-text p {
     font-size: 1.05em;
-    color: #555;
     line-height: 1.7;
 }
+
+.section.white .feature-text p { color: #555; }
+.section.dark .feature-text p { color: #ccc; }
 
 .feature-imgs {
     flex: 1;
@@ -120,17 +132,10 @@ body {
 }
 
 /* Features Grid */
-.features-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-.features-grid h2 {
+.section h2.section-title {
     text-align: center;
     font-size: 1.75em;
     font-weight: 700;
-    color: #1a1a1a;
     margin-bottom: 40px;
 }
 
@@ -140,35 +145,43 @@ body {
     gap: 16px;
 }
 
+.section.white .grid-item {
+    background: #f0f0f0;
+    color: #444;
+}
+
+.section.dark .grid-item {
+    background: #333;
+    color: #ddd;
+}
+
 .grid-item {
-    background: #f8f8f8;
     padding: 20px 24px;
     border-radius: 12px;
     font-size: 1em;
-    color: #444;
     line-height: 1.5;
 }
 
 /* Privacy Section */
-.privacy {
+.privacy-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    padding: 60px 20px;
 }
 
-.privacy h2 {
+.privacy-content h2 {
     font-size: 1.5em;
     font-weight: 700;
-    color: #1a1a1a;
     margin-bottom: 12px;
 }
 
-.privacy p {
+.privacy-content p {
     font-size: 1.05em;
-    color: #555;
     line-height: 1.7;
 }
+
+.section.dark .privacy-content p { color: #ccc; }
+.section.white .privacy-content p { color: #555; }
 
 /* Download Banner */
 .download-banner {
@@ -176,11 +189,13 @@ body {
     align-items: center;
     justify-content: space-between;
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 auto;
     padding: 32px;
-    background: #f8f8f8;
     border-radius: 16px;
 }
+
+.section.white .download-banner { background: #f0f0f0; }
+.section.dark .download-banner { background: #333; }
 
 .download-banner-info {
     display: flex;
@@ -197,14 +212,15 @@ body {
 .download-banner-info h3 {
     font-size: 1.2em;
     font-weight: 600;
-    color: #1a1a1a;
 }
 
 .download-banner-info p {
     font-size: 0.95em;
-    color: #666;
     margin-top: 2px;
 }
+
+.section.dark .download-banner-info p { color: #ccc; }
+.section.white .download-banner-info p { color: #666; }
 
 .download-banner .app-store-badge {
     height: 44px;
@@ -238,13 +254,12 @@ body {
         font-size: 2em;
     }
 
-    .feature {
+    .feature-row {
         flex-direction: column;
         gap: 32px;
-        padding: 40px 0;
     }
 
-    .feature.reverse {
+    .feature-row.reverse {
         flex-direction: column;
     }
 
@@ -315,85 +330,98 @@ window.onload = setupFeatures;
     </a>
 </div>
 
-<!-- Features -->
-<div class="features">
-
-    <!-- Feature 1 -->
-    <div class="feature">
-        <div class="feature-text">
-            <h2>Black and Red OKN Strips</h2>
-            <p>The OKN Drum App features various modes, including modes with black and red stripes. Adjust the stripe size with a pinch gesture for precise control.</p>
+<!-- Feature 1 - White -->
+<div class="section white">
+    <div class="section-inner">
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>Black and Red OKN Strips</h2>
+                <p>The OKN Drum App features various modes, including modes with black and red stripes. Adjust the stripe size with a pinch gesture for precise control.</p>
+            </div>
+            <div class="feature-imgs">
+                <img src="OKN Drum.png" alt="OKN Drum">
+                <img src="OKN Drum Red.png" alt="OKN Drum Red Stripes">
+                <img src="OKN Strips.png" alt="OKN Strips">
+            </div>
         </div>
-        <div class="feature-imgs">
-            <img src="OKN Drum.png" alt="OKN Drum">
-            <img src="OKN Drum Red.png" alt="OKN Drum Red Stripes">
-            <img src="OKN Strips.png" alt="OKN Strips">
-        </div>
-    </div>
-
-    <!-- Feature 2 -->
-    <div class="feature reverse">
-        <div class="feature-text">
-            <h2>Pediatric OKN Drum</h2>
-            <p>Comes equipped with a range of pediatric fixation targets, featuring eye-catching cartoons of animals, puppies, and dragons designed to hold children's attention.</p>
-        </div>
-        <div class="feature-imgs">
-            <img src="Pediatric OKN Drum.png" alt="Pediatric OKN Drum">
-            <img src="Pediatric OKN Strips.png" alt="Pediatric OKN Strips">
-            <img src="Kid OKN Drum.png" alt="Kid OKN Drum">
-        </div>
-    </div>
-
-    <!-- Feature 3 -->
-    <div class="feature">
-        <div class="feature-text">
-            <h2>Metronome Tool</h2>
-            <p>Includes a built-in metronome to assist with timing during exercises, helping maintain consistent speed and rhythm.</p>
-        </div>
-        <div class="feature-imgs">
-            <img src="OKN Drum.png" alt="OKN Drum">
-            <img src="OKN Drum Shapes.png" alt="OKN Drum with Shapes">
-            <img src="Pediatric OKN Drum.png" alt="Pediatric OKN Drum">
-        </div>
-    </div>
-
-</div>
-
-<!-- Features Grid -->
-<div class="features-grid">
-    <h2>Tools and Features</h2>
-    <div class="grid">
-        <div class="grid-item">Black and red stripe modes</div>
-        <div class="grid-item">Adjustable stripe width using pinch gesture</div>
-        <div class="grid-item">Multiple speed settings</div>
-        <div class="grid-item">Adjust speed with buttons or dropdown menu</div>
-        <div class="grid-item">Built-in metronome for timing exercises</div>
-        <div class="grid-item">Fixation targets: animals, puppies, dinosaurs, and shapes</div>
-        <div class="grid-item">Compatible with iPhone and iPad</div>
-        <div class="grid-item">Gyroscope support keeps pediatric targets oriented correctly</div>
     </div>
 </div>
 
-<!-- Privacy -->
-<div class="privacy">
-    <h2>No ads. No data collection. No registration.</h2>
-    <p>We take your privacy seriously. The OKN Drum App does not collect, store, or share any personal data or biometric identifiers.</p>
+<!-- Feature 2 - Dark -->
+<div class="section dark">
+    <div class="section-inner">
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2>Pediatric OKN Drum</h2>
+                <p>Comes equipped with a range of pediatric fixation targets, featuring eye-catching cartoons of animals, puppies, and dragons designed to hold children's attention.</p>
+            </div>
+            <div class="feature-imgs">
+                <img src="Pediatric OKN Drum.png" alt="Pediatric OKN Drum">
+                <img src="Pediatric OKN Strips.png" alt="Pediatric OKN Strips">
+                <img src="Kid OKN Drum.png" alt="Kid OKN Drum">
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Download Banner -->
-<div class="download-banner">
-    <div class="download-banner-info">
+<!-- Feature 3 - White -->
+<div class="section white">
+    <div class="section-inner">
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2>Metronome Tool</h2>
+                <p>Includes a built-in metronome to assist with timing during exercises, helping maintain consistent speed and rhythm.</p>
+            </div>
+            <div class="feature-imgs">
+                <img src="OKN Drum.png" alt="OKN Drum">
+                <img src="OKN Drum Shapes.png" alt="OKN Drum with Shapes">
+                <img src="Pediatric OKN Drum.png" alt="Pediatric OKN Drum">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Grid - Dark -->
+<div class="section dark">
+    <div class="section-inner">
+        <h2 class="section-title">Tools and Features</h2>
+        <div class="grid">
+            <div class="grid-item">Black and red stripe modes</div>
+            <div class="grid-item">Adjustable stripe width using pinch gesture</div>
+            <div class="grid-item">Multiple speed settings</div>
+            <div class="grid-item">Adjust speed with buttons or dropdown menu</div>
+            <div class="grid-item">Built-in metronome for timing exercises</div>
+            <div class="grid-item">Fixation targets: animals, puppies, dinosaurs, and shapes</div>
+            <div class="grid-item">Compatible with iPhone and iPad</div>
+            <div class="grid-item">Gyroscope support keeps pediatric targets oriented correctly</div>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy - White -->
+<div class="section white">
+    <div class="privacy-content">
+        <h2>No ads. No data collection. No registration.</h2>
+        <p>We take your privacy seriously. The OKN Drum App does not collect, store, or share any personal data or biometric identifiers.</p>
+    </div>
+</div>
+
+<!-- Download Banner - Dark -->
+<div class="section dark">
+    <div class="download-banner">
+        <div class="download-banner-info">
+            <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
+                <img src="OKN-Drum-Logo.png" alt="OKN Drum App Logo" class="download-banner-logo">
+            </a>
+            <div>
+                <h3>OKN Drum App</h3>
+                <p>The ultimate OKN drum for iPhone and iPad.</p>
+            </div>
+        </div>
         <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
-            <img src="OKN-Drum-Logo.png" alt="OKN Drum App Logo" class="download-banner-logo">
+            <img src="DownloadButton.svg" alt="Download on the App Store" class="app-store-badge">
         </a>
-        <div>
-            <h3>OKN Drum App</h3>
-            <p>The ultimate OKN drum for iPhone and iPad.</p>
-        </div>
     </div>
-    <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
-        <img src="DownloadButton.svg" alt="Download on the App Store" class="app-store-badge">
-    </a>
 </div>
 
 <!-- Footer -->
