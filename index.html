@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OKN Drum Pro App</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<meta name="description" content="The OKN Drum Pro App is a comprehensive OKN drum app compatible with the iPhone and iPad.">
+<meta name="keywords" content="OKN App, OKN Drum, OKN Strips, OptiDrum, OKN Strip, Pediatric OKN Drum, Pediatric OKN Strips">
+<meta name="apple-itunes-app" content="app-id=6474153180">
+
+<style>
+    body, html {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #ffffff;
+        color: #000;
+    }
+    .container {
+        padding: 50px 15px;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+
+.download-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+    max-width: 1440px;
+    margin: 0 auto; /* Adjusted to control top margin as well */
+    box-sizing: border-box;
+}
+
+
+.logo-and-info > div {
+    margin-left: 15px;
+}
+
+.logo-and-info {
+    display: flex;
+    align-items: center;
+}
+
+.logo-and-info h2, .logo-and-info p {
+    margin: 5px 0; /* Compact spacing between elements */
+}
+
+.download-section a img {
+    max-height: 100px; /* Match the header download button height */
+    margin-left: 10px; /* Consistent spacing */
+}
+
+@media (max-width: 768px) {
+    .download-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-and-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .download-section a img {
+        margin: 10px 0; /* Adjusted spacing for mobile layout */
+    }
+}
+
+
+.tools-section {
+    text-align: left; /* Aligns text to the left */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.tools-list {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly between the columns */
+}
+
+.tools-column li {
+    list-style-type: disc; /* Enables bullet points */
+    padding: 0; /* Removes default padding */
+    flex-basis: 45%; /* Adjusts the width of each column */
+}
+
+.tools-column li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+
+
+.header-top {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: start; /* Align items to the start of the container */
+    gap: 20px; /* Optional: Adjust the space between the logo/button and the text */
+}
+
+.logo-and-button {
+    display: flex;
+    flex-direction: column; /* Stack logo and button vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Space between logo and button */
+}
+
+.header-logo {
+    max-width: 50%; /* Reduces the logo's maximum width to 50% of its container size */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures the image is block-level to center it if necessary */
+    margin: 0 auto; /* Centers the logo within its container */
+}
+
+
+.new-download-button {
+    display: block;
+    max-height: 50px; /* Adjust based on your design */
+    margin-top: 10px; /* Space above the button */
+}
+
+/* Adjust the .header-content padding or margins as necessary */
+.header-content {
+    margin-left: 20px; /* Adds some space between the text and the logo/button */
+}
+
+
+/* Ensure the rest of your CSS remains unchanged to maintain the current styling */
+
+    .header {
+        margin-bottom: 2em;
+    }
+    .header h1 {
+        margin-bottom: 0.5em;
+    }
+    .download-button {
+        font-size: 1em;
+        padding: 10px 20px;
+        background-color: #0275d8;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .download-button:hover {
+        background-color: #025aa5;
+    }
+    .section {
+        margin-bottom: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 20px;
+   	max-width: 1440px; /* Set maximum width to 1440px */
+    	margin-left: auto; /* Centers the section */
+    	margin-right: auto; /* Centers the section */
+
+    }
+
+.last-section-before-download {
+    margin-bottom: 0; /* Adjust class name as appropriate */
+}
+    .feature-description {
+        flex: 1;
+        margin: 20px;
+    }
+
+.feature-imgs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-imgs img {
+    max-width: 250px; /* Maximum width for each image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Necessary for centering images if needed */
+    margin: 0 auto; /* Center images within their flex container */
+}
+
+
+    h2 {
+        font-size: 1.75em;
+        color: #333;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #666;
+    }
+    .footer {
+        padding: 20px;
+        background: #333;
+        color: white;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: auto;
+    }
+
+@media (max-width: 768px) {
+
+    .section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .feature-description {
+        order: -1; /* Ensures text appears above images */
+    }
+
+    .mobile-optimized-layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .mobile-optimized-layout img {
+        width: 100%; /* Adjust so images resize within their cells */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+</style>
+<script>
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 768);
+}
+
+function setupFeatures() {
+    if (isMobileDevice()) {
+        createImageSlideshow();
+    } else {
+        // Potential place for desktop-specific adjustments if needed
+    }
+}
+
+function createImageSlideshow() {
+    var featureImgsContainers = document.querySelectorAll('.feature-imgs');
+    featureImgsContainers.forEach(function(container) {
+        let images = container.querySelectorAll('img');
+        let currentImgIndex = 0;
+        images.forEach((img, index) => img.style.display = (index === 0) ? "block" : "none");
+        setInterval(() => {
+            images[currentImgIndex].style.display = "none";
+            currentImgIndex = (currentImgIndex + 1) % images.length;
+            images[currentImgIndex].style.display = "block";
+        }, 3000);
+    });
+}
+
+window.onload = setupFeatures;
+</script>
+
+
+<div class="container">
+<div class="header">
+    <div class="header-top">
+        <!-- Container for logo and new download button -->
+        <div class="logo-and-button">
+            <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
+                <img src="OKN-Drum-Logo.png" alt="OKN Drum Pro App Logo" class="header-logo">
+            </a>
+            <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
+                <img src="DownloadButton.svg" alt="Download on the App Store" class="new-download-button">
+            </a>
+        </div>
+        <!-- Container for text content now with links -->
+        <div class="header-content">
+            <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank" style="text-decoration: none; color: inherit;">
+                <h1>OKN Drum Pro App</h1>
+            </a>
+            <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank" style="text-decoration: none; color: inherit;">
+                <p>The ultimate OKN Drum app.</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+    
+    <!-- Feature 1 -->
+    <div class="section feature">
+        <div class="feature-description">
+            <h2>Black and Red OKN Strips</h2>
+            <p>The OKN Drum Pro App features various modes, including modes with black and red stripes. Users have the ability to adjust the stripe size by using a pinch gesture.</p>
+        </div>
+        <div class="feature-imgs">
+            <img src="OKN Drum.png" alt="OKN Drum">
+            <img src="OKN Drum Red.png" alt="OKN Strips">
+            <img src="OKN Strips.png" alt="OptiDrum">
+
+        </div>
+    </div>
+
+<!-- Feature 2 -->
+    <div class="section feature">
+        <div class="feature-imgs">
+            <img src="Pediatric OKN Drum.png" alt="Kid OKN Drum">
+            <img src="Pediatric OKN Strips.png" alt="Pediatric OKN Strips">
+            <img src="Kid OKN Drum.png" alt="Kid OKN Strips">
+
+        </div>
+        <div class="feature-description">
+            <h2>Pediatric OKN Drum</h2>
+            <p>The OKN Drum Pro comes equipped with a range of pediatric fixation targets, featuring eye-catching cartoons of animals, puppies, and dragons designed to hold children's attention.</p>
+        </div>
+
+    </div>
+
+<!-- Feature 3 -->
+    <div class="section feature">
+        <div class="feature-description">
+            <h2>Metronome Tool</h2>
+            <p>The OKN Drum Pro includes a metronome feature to assist with timing during exercises.</p>
+        </div>
+        <div class="feature-imgs">
+            <img src="OKN Drum.png" alt="OKN Drum">
+            <img src="OKN Drum Shapes.png" alt="OKN Drum with Shapes">
+            <img src="Pediatric OKN Drum.png" alt="Pediatric OKN Drum">
+
+        </div>
+    </div>
+
+    
+<!-- Tools Section -->
+<div class="section tools-section">
+    <h2>Tools and Features</h2>
+    <div class="tools-list">
+        <ul class="tools-column" style="width: 50%;">
+            <li>Black and Red Stripe Modes</li>
+            <li>Adjustable Stripe Width Using Pinch Gesture</li>
+            <li>Multiple Speeds</li>
+            <li>Adjust Speed Using Plus/Minus Buttons or the Dropdown Menu</li>
+        </ul>
+        <ul class="tools-column" style="width: 50%;">
+            <li>Metronome to Assist in Timing Exercises</li> 
+            <li>Multiple Fixation Targets Including Animals, Puppies, Dinosaurs, and Shapes</li>
+            <li>Compatible with iPhone and iPad</li>
+            <li>Turn Device to Change the Direction of the Stripes, uses Gyroscope to Maintain Pediatric Targets in Correct Orientation</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Privacy Section -->
+<div class="section feature">
+    <div class="feature-imgs">
+    </div>
+    <div class="feature-description">
+        <h2>No advertisements. No data collection. No registration.</h2>
+        <p>We take your privacy seriously. The OKN Drum Pro App does not collect any data from its users. We fully respect your privacy. Our app does not collect, store, or share any personal face data or biometric identifiers.</p>
+    </div>
+
+</div>
+
+
+<!-- Download Section Before Footer -->
+<div class="download-section">
+    <div class="logo-and-info">
+        <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
+            <img src="OKN-Drum-Logo.png" alt="OKN Drum Pro App Logo" style="max-width: 100px; height: auto;">
+        </a>
+        <div>
+            <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank" style="text-decoration: none; color: inherit;">
+                <h2>OKN Drum Pro App</h2>
+            </a>
+            <p>The ultimate OKN Drum app.</p>
+        </div>
+    </div>
+    <a href="https://apps.apple.com/us/app/okn-drum-pro/id6474153180" target="_blank">
+        <img src="DownloadButton.svg" alt="Download on the App Store" style="max-width: 150px; height: auto;">
+    </a>
+</div>
+<br>
+
+   <div class="footer">
+    OKN Drum Pro App © 2024 | <a href="mailto:mullman@gmail.com" style="color: white;">Contact Us</a>
+</div>
+
+</body>
+</html>
